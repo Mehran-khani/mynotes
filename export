@@ -1,0 +1,32 @@
+[?1049h[>4;2m[?1h=[?2004h[?1004h[1;12r[?12h[?12l[22;2t[22;1t[27m[29m[m[H[2J[?25l[12;1H"~/.zshrc" 6L, 271B[1;1Hexport PATH=/users/mehrankhani/Development/flutter/bin:$PATH
+export PATH=/users/mehrankhani/Development/flutter/bin:$PATH
+export PATH=/users/mehrankhani/Development/flutter/bin:$PATH
+export PATH="$PATH:`pwd`/flutter/bin"
+export PATH="$PATH:`pwd`/bin/cache/dart-sdk/bin"
+
+[94m~                                                                                                                                 [8;1H~                                                                                                                                 [9;1H~                                                                                                                                 [10;1H~                                                                                                                                 [11;1H~                                                                                                                                 [1;1H[?25h[?25l[m[12;1H[1m-- INSERT --[m[12;13H[K[1;1Hxport PATH=/users/mehrankhani/Development/flutter/bin:$PATH[1;60H[K[1;1H[?25h[?25loxport PATH=/users/mehrankhani/Development/flutter/bin:$PATHo[?25h[?25luxport PATH=/users/mehrankhani/Development/flutter/bin:$PATHou[?25h[?25lrxport PATH=/users/mehrankhani/Development/flutter/bin:$PATHour[?25h[?25lcxport PATH=/users/mehrankhani/Development/flutter/bin:$PATHourc[?25h[?25lexport PATH=/users/mehrankhani/Development/flutter/bin:$PATHource[?25h[?25l[2;11r[2;1H[L[1;12r[1;6H[K[2;1Hxport PATH=/users/mehrankhani/Development/flutter/bin:$PATH[?25h[?25l[3;11r[3;1H[L[1;12r[2;1H[K[3;1Hxport PATH=/users/mehrankhani/Development/flutter/bin:$PATH[?25h[?25l[4;11r[4;1H[L[1;12r[3;1H[K[4;1Hxport PATH=/users/mehrankhani/Development/flutter/bin:$PATH[?25h[?25l[5;11r[5;1H[L[1;12r[4;1H[K[5;1Hxport PATH=/users/mehrankhani/Development/flutter/bin:$PATH[?25h[?25lqxport PATH=/users/mehrankhani/Development/flutter/bin:$PATHq[?25h[?25l[6;11r[6;1H[L[1;12r[5;2H[K[6;1Hxport PATH=/users/mehrankhani/Development/flutter/bin:$PATH[?25h[?25lqxport PATH=/users/mehrankhani/Development/flutter/bin:$PATHq[?25h[?25l[7;11r[7;1H[L[1;12r[6;2H[K[7;1Hxport PATH=/users/mehrankhani/Development/flutter/bin:$PATH[?25h[?25l[8;11r[8;1H[L[1;12r[7;1H[K[8;1Hxport PATH=/users/mehrankhani/Development/flutter/bin:$PATH[?25h[?25l xport PATH=/users/mehrankhani/Development/flutter/bin:$PATH [?25h[12;1H[K[8;1H[?25l[?25h[7;1H[6;1H
+[?25l[12;1HEntering Ex mode.  Type "visual" to go to Normal mode.[?25h
+:q1!
+[?25l[97m[41mE488: Trailing characters: ![?25h[m
+:[34m^[[m
+[?25l[97m[41mE492: Not an editor command: ^[[?25h[m
+:
+[11;1H xport PATH=/users/mehrankhani/Development/flutter/bin:$PATH
+:
+[11;1Hexport PATH=/users/mehrankhani/Development/flutter/bin:$PATH
+:
+[11;1Hexport PATH=/users/mehrankhani/Development/flutter/bin:$PATH
+:
+[11;1Hexport PATH="$PATH:`pwd`/flutter/bin"
+:
+[11;1Hexport PATH="$PATH:`pwd`/bin/cache/dart-sdk/bin"
+:
+[11;1H 
+:
+[?25l[97m[41mE501: At end-of-file[?25h[m
+:Qq1!![34m^[^[[m
+[?25l[97m[41mE492: Not an editor command: Qq1!!^[^[[?25h[m
+:§[12;3H[27m[29m[m[H[2J[27m[29m[m[H[2J[27m[29m[m[H[2J[12;1H[?1004l[?2004l[?1l>[>4;m[?1049lVim: Caught deadly signal HUP
+Vim: preserving files...
+Vim: Finished.
+[12;1H[23;2t[23;1t
