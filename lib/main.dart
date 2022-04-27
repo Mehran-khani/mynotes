@@ -9,18 +9,21 @@ import 'firebase_options.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(MaterialApp(
-    title: 'Flutter Demo',
-    theme: ThemeData(
-      primarySwatch: Colors.blue,
+  runApp(
+    MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const HomePage(),
+      routes: {
+        loginRoute: (context) => const LoginView(),
+        registerRoute: (context) => const RegisterView(),
+        notesRoute: (context) => const NotesView(),
+        verifyEmailRoute: (context) => const VerifyEmailView()
+      },
     ),
-    home: const HomePage(),
-    routes: {
-      loginRoute: (context) => const LoginView(),
-      registerRoute: (context) => const RegisterView(),
-      notesRoute:(context) => const NotesView(),
-    },
-  ));
+  );
 }
 
 class HomePage extends StatelessWidget {
