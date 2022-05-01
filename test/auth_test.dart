@@ -1,4 +1,3 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:mynotes/services/auth/aut_exception.dart';
 import 'package:mynotes/services/auth/auth_provider.dart';
 import 'package:mynotes/services/auth/auth_user.dart';
@@ -72,7 +71,6 @@ class MockAuthProvider implements AuthProvider {
   bool get isInitialized => _isInitialized;
 
   @override
-  // TODO: implement currentUser
   AuthUser? get currentUser => _user;
 
   @override
