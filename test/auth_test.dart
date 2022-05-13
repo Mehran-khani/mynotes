@@ -42,21 +42,25 @@ void main() {
         email: 'someone@bar.com',
         password: 'foobar',
       );
-      expect(badPasswordUser, throwsA(const TypeMatcher<WrongPasswordAuthException>()));
+      expect(badPasswordUser,
+          throwsA(const TypeMatcher<WrongPasswordAuthException>()));
 
       final user = await provider.register(email: 'foo', password: 'bar');
-      expect(provider.currentUser, user );
+      expect(provider.currentUser, user);
       expect(user.isEmailVerified, false);
     });
-    test('Logged in user should be able to get verified', (){
+    test('Logged in user should be able to get verified', () {
       provider.sendEmailVerification();
       final user = provider.currentUser;
       expect(user, isNotNull);
-      expect(user!.isEmailVerified, true );
+      expect(user!.isEmailVerified, true);
     });
-    test('Should be able to log out and log in again', ()async{
+    test('Should be able to log out and log in again', () async {
       await provider.logOut();
-      await provider.logIn(email: 'email', password: 'password',);
+      await provider.logIn(
+        email: 'email',
+        password: 'password',
+      );
       final user = provider.currentUser;
       expect(user, isNotNull);
     });
@@ -89,7 +93,11 @@ class MockAuthProvider implements AuthProvider {
     if (!isInitialized) throw NotInitializedException();
     if (email == 'foo@bar.com') throw UserNotFoundAuthExcepion();
     if (password == 'foobar') throw WrongPasswordAuthException();
-    const user = AuthUser(isEmailVerified: false, email: 'foo@bar.com');
+    const user = AuthUser(
+      id: 'my_id',
+      isEmailVerified: false,
+      email: 'foo@bar.com',
+    );
     _user = user;
     return Future.value(user);
   }
@@ -121,7 +129,11 @@ class MockAuthProvider implements AuthProvider {
     if (!isInitialized) throw NotInitializedException();
     final user = _user;
     if (user == null) throw UserNotFoundAuthExcepion();
-    const newUser = AuthUser(isEmailVerified: true, email: 'foo@bar.com');
+    const newUser = AuthUser(
+      id: 'my_id',
+      isEmailVerified: true,
+      email: 'foo@bar.com',
+    );
     _user = newUser;
   }
 }
