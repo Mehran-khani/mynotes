@@ -6,6 +6,48 @@ import 'package:mynotes/services/auth/bloc/auth_state.dart';
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   AuthBloc(AuthProvider provider)
       : super(const AuthStateUninitialized(isLoading: true)) {
+    // on<EventCreateOrUpdate>((event, emit) {
+    //   emit(const CreateNoteState(isLoading: false));
+    // },);
+
+    //forgot password
+    on<AuthEventForgotPassword>(
+      (event, emit) async {
+        emit(const AuthStateFotgotPassword(
+          isLoading: false,
+          exception: null,
+          hasSentEmail: false,
+        ));
+        final email = event.email;
+        if (email == null) {
+          return; //user just wants to go to forgot password screen
+        }
+
+        //user wants to send forgot password email
+        emit(const AuthStateFotgotPassword(
+          isLoading: true,
+          exception: null,
+          hasSentEmail: false,
+        ));
+        bool didSendEmail;
+        Exception? exception;
+
+        try {
+          await provider.passwordReset(toEmail: email);
+          didSendEmail = true;
+          exception = null;
+        } on Exception catch (e) {
+          didSendEmail = false;
+          exception = e;
+        }
+
+        emit(AuthStateFotgotPassword(
+          isLoading: false,
+          exception: exception,
+          hasSentEmail: didSendEmail,
+        ));
+      },
+    );
     //send email verification
     on<AuthEventSendEmailVerification>((event, emit) async {
       await provider.sendEmailVerification();
