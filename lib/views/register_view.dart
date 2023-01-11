@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mynotes/constants/route.dart';
 import 'package:mynotes/services/auth/aut_exception.dart';
-import 'package:mynotes/services/auth/auth_service.dart';
 import 'package:mynotes/services/auth/bloc/auth_bloc.dart';
 import 'package:mynotes/services/auth/bloc/auth_event.dart';
 import 'package:mynotes/services/auth/bloc/auth_state.dart';
@@ -66,7 +64,8 @@ class _RegisterViewState extends State<RegisterView> {
                   enableSuggestions: false,
                   autocorrect: false,
                   autofocus: true,
-                  decoration: const InputDecoration(hintText: 'Enter your email'),
+                  decoration:
+                      const InputDecoration(hintText: 'Enter your email'),
                 ),
                 TextField(
                   controller: _password,
@@ -91,10 +90,11 @@ class _RegisterViewState extends State<RegisterView> {
                         child: const Text('Register'),
                       ),
                       TextButton(
-                          onPressed: () {
-                            context.read<AuthBloc>().add(const AuthEventLogOut());
-                          },
-                          child: const Text('Already registered? Login here!'))
+                        onPressed: () {
+                          context.read<AuthBloc>().add(const AuthEventLogOut());
+                        },
+                        child: const Text('Already registered? Login here!'),
+                      )
                     ],
                   ),
                 ),

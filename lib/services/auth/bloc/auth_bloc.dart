@@ -58,6 +58,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
       (event, emit) async {
         final email = event.email;
         final password = event.password;
+        final user = provider.currentUser;
         try {
           await provider.register(
             email: email,
@@ -73,6 +74,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         }
       },
     );
+
     on<AuthEventShouldRegister>(
       (event, emit) {
         emit(const AuthStateRegistering(
