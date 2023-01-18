@@ -40,7 +40,7 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBFIseyqPCdUM8-Dn60QtB9j4eBvg9pCio',
+    apiKey: '', //this part you should use your own api key
     appId: '1:1020204058732:android:2cd9477db57d1067423049',
     messagingSenderId: '1020204058732',
     projectId: 'my-notes-meh',
@@ -53,7 +53,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1020204058732',
     projectId: 'my-notes-meh',
     storageBucket: 'my-notes-meh.appspot.com',
-    iosClientId: '1020204058732-hnj4githbl3vsc1vd67ph3933m7b23qp.apps.googleusercontent.com',
+    iosClientId:
+        '1020204058732-hnj4githbl3vsc1vd67ph3933m7b23qp.apps.googleusercontent.com',
     iosBundleId: 'com.mehran.mynotes',
   );
 }
